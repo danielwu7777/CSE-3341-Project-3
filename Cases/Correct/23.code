@@ -1,0 +1,17 @@
+program
+	int x, y, z;
+	ref a, b, c;
+begin
+	x = 5;
+	y = 10;
+	if !(x < y) then {
+		while (0 - 10) < x {
+			x= x - 1;
+		}
+	} else {
+		while y <= 15 {
+			y=y+2;
+		}
+	}
+	output(y);
+end

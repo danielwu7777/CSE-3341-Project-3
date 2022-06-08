@@ -1,0 +1,10 @@
+program
+	int x;
+begin
+	x=input();
+	if x==x then {
+		int x;
+		x=99;
+	}
+	output(x);
+end

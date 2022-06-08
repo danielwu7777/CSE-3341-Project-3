@@ -1,0 +1,14 @@
+program
+	ref x, y, n;
+begin
+	x = new class;
+	n = new class;
+	n = 5;
+	x = 4;
+	y = share x;
+	while !(x==0) {
+		n = n*x;
+		y = y-1;
+		output(n);
+	}
+end

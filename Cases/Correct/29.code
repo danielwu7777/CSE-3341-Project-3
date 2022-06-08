@@ -1,0 +1,19 @@
+program
+	int x;
+begin
+	x = 1;
+	ref y;
+	y = new class;
+	y = 10;
+	ref z;
+	z = share y;
+	while !(x==y) {
+		ref x;
+		x = share y;
+		while 1 <= z {
+			z = z-1;
+		}
+		x = x + 1;
+	}
+	output(x);
+end

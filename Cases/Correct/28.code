@@ -1,0 +1,24 @@
+program
+begin
+	ref x;
+	x = new class;
+	x = 1;
+	if x==x then {
+		ref x;
+		x = new class;
+		x = 2;
+		if x==x then {
+			ref x;
+			x = new class;
+			x = 3;
+			if x==x then {
+				ref x;
+				x = new class;
+				x = 4;
+			}
+			output(x);
+		}
+		output(x);
+	}
+	output(x);
+end

@@ -1,0 +1,18 @@
+program
+begin
+	ref x, y, z;
+	x = new class;
+	y = share x;
+	z = share y;
+	x = 10;
+	while !(z==0) {
+		x = x-1;
+		ref y;
+		y = new class;
+		y = 1;
+		while !(y==64) {
+			y = 2*y;
+			output(y);
+		}
+	}
+end

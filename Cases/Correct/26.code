@@ -1,0 +1,12 @@
+program
+	ref x;
+	int n;
+begin
+	x = new class;
+	x = 4;
+	while !(x==0) {
+		n = input();
+		x = x-1;
+		output(n);
+	}
+end

@@ -1,0 +1,15 @@
+program
+	ref x;
+begin
+	x = new class;
+	x = 4;
+	ref y;
+	y = share x;
+	while !(x==0) {
+		ref z;
+		z = new class;
+		z = x;
+		x = z-1;
+	}
+	output(y);
+end
