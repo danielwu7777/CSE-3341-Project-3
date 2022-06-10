@@ -8,8 +8,6 @@ class Main {
 		
 		prog.parse();
 		
-		prog.semantic();
-		
-		prog.print();
+		prog.execute();
 	}
 }

@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Id {
 	String identifier;
 	
@@ -35,5 +38,20 @@ class Id {
 	
 	void print() {
 		System.out.print(identifier);
+	}
+
+	// intOrRef is true when id is int and globalOrLocal is true when id is a global variable
+	void execute(boolean intOrRef, boolean globalOrLocal) {
+		if (globalOrLocal) {
+			if (intOrRef) {
+				StaticReg.globVar.put(identifier, 0);
+			}
+			else {
+				StaticReg.globVar.put(identifier, null);
+			}
+		}
+		else {
+			// if id is local, somehow add it into the map on the top of the stack
+		}
 	}
 }

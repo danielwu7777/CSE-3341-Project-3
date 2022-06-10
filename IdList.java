@@ -37,4 +37,12 @@ class IdList {
 			list.print();
 		}
 	}
+
+	// input is true when declaring int or false if declaring ref
+    void execute(boolean intOrRef) {
+		id.execute(intOrRef, true);
+		if (list != null) {
+			list.execute(intOrRef);
+		}
+    }
 }

@@ -22,4 +22,8 @@ class DeclInt {
 		list.print();
 		System.out.println(";");
 	}
+
+    void execute() {
+		list.execute(true);
+    }
 }

@@ -3,7 +3,7 @@ import java.util.*;
 class Program {
 	DeclSeq ds;
 	StmtSeq ss;
-	
+
 	void parse() {
 		Parser.expectedToken(Core.PROGRAM);
 		Parser.scanner.nextToken();
@@ -19,7 +19,7 @@ class Program {
 		Parser.scanner.nextToken();
 		Parser.expectedToken(Core.EOS);
 	}
-	
+
 	void semantic() {
 		Parser.scopes = new Stack<HashMap<String, Core>>();
 		Parser.scopes.push(new HashMap<String, Core>());
@@ -30,7 +30,7 @@ class Program {
 		ss.semantic();
 		Parser.scopes.pop();
 	}
-	
+
 	void print() {
 		System.out.println("program");
 		if (ds != null) {
@@ -39,5 +39,12 @@ class Program {
 		System.out.println("begin");
 		ss.print(1);
 		System.out.println("end");
+	}
+
+	void execute() {
+		if (ds != null) {
+			ds.execute();
+		}
+		ss.execute();
 	}
 }

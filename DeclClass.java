@@ -22,4 +22,8 @@ class DeclClass {
 		list.print();
 		System.out.println(";");
 	}
+
+    void execute() {
+		list.execute(false);
+    }
 }
