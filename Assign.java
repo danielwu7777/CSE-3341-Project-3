@@ -79,4 +79,22 @@ class Assign implements Stmt {
 		}
 		System.out.println(";");
 	}
+
+	public void execute() {
+		if (assignTo.checkType() == Core.INT) {
+			assignTo.execute(true, false);
+		}
+		else {
+			assignTo.execute(false, false);
+		}
+		if (type == 0) {
+			// get input for RHS
+		}
+		else if (type == 1) {
+			//Heap.listInt.add(e)
+		}
+		
+	}
+
+	
 }

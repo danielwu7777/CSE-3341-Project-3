@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.Map;
 
 class Id {
@@ -47,11 +46,21 @@ class Id {
 				StaticReg.globVar.put(identifier, 0);
 			}
 			else {
-				StaticReg.globVar.put(identifier, null);
+				Heap.listInt.add(null);
+				StaticReg.globVar.put(identifier, Heap.listInt.size() - 1);
 			}
 		}
 		else {
-			// if id is local, somehow add it into the map on the top of the stack
+			// If id is local, add to the map on the top of the stack
+			Map<String, Integer> m = StackReg.localVar.pop();
+			if (intOrRef) {
+				m.put(identifier, 0);
+			}
+			else {
+				Heap.listInt.add(null);
+				m.put(identifier, Heap.listInt.size() - 1);
+			}
+			StackReg.localVar.add(m);
 		}
 	}
 }
