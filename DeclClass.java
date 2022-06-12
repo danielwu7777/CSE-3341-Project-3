@@ -24,6 +24,6 @@ class DeclClass {
 	}
 
     void execute() {
-		list.execute(false);
+		list.execute();
     }
 }

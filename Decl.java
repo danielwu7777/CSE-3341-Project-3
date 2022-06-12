@@ -1,7 +1,7 @@
 class Decl implements Stmt {
 	DeclInt declInt;
 	DeclClass declClass;
-	
+
 	public void parse() {
 		if (Parser.scanner.currentToken() == Core.INT) {
 			declInt = new DeclInt();
@@ -11,7 +11,7 @@ class Decl implements Stmt {
 			declClass.parse();
 		}
 	}
-	
+
 	public void semantic() {
 		if (declInt != null) {
 			declInt.semantic();
@@ -19,7 +19,7 @@ class Decl implements Stmt {
 			declClass.semantic();
 		}
 	}
-	
+
 	public void print(int indent) {
 		if (declInt != null) {
 			declInt.print(indent);
@@ -28,11 +28,11 @@ class Decl implements Stmt {
 		}
 	}
 
-	void execute() {
+	public void execute() {
 		if (declInt != null) {
 			declInt.execute();
 		} else {
 			declClass.execute();
 		}
-    }
+	}
 }

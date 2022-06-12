@@ -1,0 +1,7 @@
+{xg=0} this should be xg => 0
+[{}]
+{xg=0} this should be xg => 0
+[{}]
+{xg=-10} this should be xg => 0
+[{}, {}]
+-10

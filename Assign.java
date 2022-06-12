@@ -1,14 +1,20 @@
 class Assign implements Stmt {
-	// type is 1 if "new" assignment, 2 if "ref" assignment, 3 if "<expr>" assignment
+	// type is 1 if "new" assignment, 2 if "ref" assignment, 3 if "<expr>"
+	// assignment
 	int type;
 	// assignTo is the id on the LHS of assignment
 	Id assignTo;
+	String identifierLeft;
 	// assignFrom is the id on RHS of "ref" assignment
 	Id assignFrom;
+	String identifierRight;
 	Expr expr;
-	
+	boolean intOrRef;
+
 	public void parse() {
 		assignTo = new Id();
+		identifierLeft = Parser.scanner.getID();
+		intOrRef = Parser.scanner.intOrRef(Parser.scanner.currentToken());
 		assignTo.parse();
 		Parser.expectedToken(Core.ASSIGN);
 		Parser.scanner.nextToken();
@@ -28,6 +34,7 @@ class Assign implements Stmt {
 			type = 2;
 			Parser.scanner.nextToken();
 			assignFrom = new Id();
+			identifierRight = Parser.scanner.getID();
 			assignFrom.parse();
 		} else {
 			type = 3;
@@ -37,7 +44,7 @@ class Assign implements Stmt {
 		Parser.expectedToken(Core.SEMICOLON);
 		Parser.scanner.nextToken();
 	}
-	
+
 	public void semantic() {
 		assignTo.semantic();
 		if (type == 0) {
@@ -60,9 +67,9 @@ class Assign implements Stmt {
 			expr.semantic();
 		}
 	}
-	
+
 	public void print(int indent) {
-		for (int i=0; i<indent; i++) {
+		for (int i = 0; i < indent; i++) {
 			System.out.print("\t");
 		}
 		assignTo.print();
@@ -78,5 +85,71 @@ class Assign implements Stmt {
 			expr.print();
 		}
 		System.out.println(";");
+	}
+
+	public void execute() {
+		boolean globalLeft = StaticReg.isGlobal(identifierLeft);
+		switch (type) {
+			// input() assignment
+			case 0:
+				if (Parser.dataScanner.currentToken() == Core.EOS) {
+					System.out.println("ERROR: No more integers to read in data file");
+				} else {
+					int input = Parser.dataScanner.getCONST();
+					if (intOrRef) {
+						if (globalLeft) {
+							StaticReg.globVar.replace(identifierLeft + "g", input);
+						} else {
+							StackReg.localVar.peek().replace(identifierLeft, input);
+						}
+					} else {
+						if (globalLeft) {
+							Heap.listInt.set(StaticReg.globVar.get(identifierLeft + "g"), input);
+						} else {
+							Heap.listInt.set(StackReg.localVar.peek().get(identifierLeft), input);
+						}
+					}
+					Parser.dataScanner.nextToken();
+				}
+				break;
+			// "new class" assignment
+			case 1:
+				if (intOrRef) {
+					if (globalLeft) {
+						StaticReg.globVar.replace(identifierLeft, 0);
+					} else {
+						StackReg.localVar.peek().replace(identifierLeft, 0);
+					}
+				} else {
+					Heap.listInt.add(null);
+					StackReg.localVar.peek().replace(identifierLeft, Heap.listInt.size() - 1);
+				}
+				break;
+			// "share" assignment
+			case 2:
+				if (StaticReg.isGlobal(identifierRight)) {
+					StaticReg.globVar.replace(identifierLeft, StaticReg.globVar.get(identifierRight));
+				} else {
+					StackReg.localVar.peek().replace(identifierLeft, StackReg.localVar.peek().get(identifierRight));
+				}
+				break;
+			// <expr>
+			case 3:
+				int exprResult = expr.execute();
+				if (intOrRef) {
+					if (globalLeft) {
+						StaticReg.globVar.replace(identifierLeft + "g", exprResult);
+					} else {
+						StackReg.localVar.peek().replace(identifierLeft, exprResult);
+					}
+				} else {
+					if (globalLeft) {
+						Heap.listInt.set(StaticReg.globVar.get(identifierLeft + "g"), exprResult);
+					} else {
+						Heap.listInt.set(StackReg.localVar.peek().get(identifierLeft), exprResult);
+					}
+				}
+				break;
+		}
 	}
 }

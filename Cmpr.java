@@ -2,7 +2,7 @@ class Cmpr {
 	Expr expr1;
 	Expr expr2;
 	int option;
-	
+
 	void parse() {
 		expr1 = new Expr();
 		expr1.parse();
@@ -20,15 +20,15 @@ class Cmpr {
 		expr2 = new Expr();
 		expr2.parse();
 	}
-	
+
 	void semantic() {
 		expr1.semantic();
 		expr2.semantic();
 	}
-	
+
 	void print() {
 		expr1.print();
-		switch(option) {
+		switch (option) {
 			case 0:
 				System.out.print("==");
 				break;
@@ -40,5 +40,21 @@ class Cmpr {
 				break;
 		}
 		expr2.print();
+	}
+
+	public boolean execute() {
+		boolean b = false;
+		switch (option) {
+			case 0:
+				b = expr1.execute() == expr2.execute();
+				break;
+			case 1:
+				b = expr1.execute() < expr2.execute();
+				break;
+			case 2:
+				b = expr1.execute() <= expr2.execute();
+				break;
+		}
+		return b;
 	}
 }

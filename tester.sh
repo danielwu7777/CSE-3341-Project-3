@@ -19,7 +19,7 @@ for value in {1..30}
 do
 	echo ""
 	echo "Running ${value}.code"
-	timeout 5 ${runner} Cases/Correct/${value}.code Cases/Correct/${value}.data > Cases/Correct/${value}.student
+	${runner} Cases/Correct/${value}.code Cases/Correct/${value}.data > Cases/Correct/${value}.student
 	echo "Running diff with ${value}.expected"
 	grep -o '[[:digit:]]\+' Cases/Correct/${value}.student > temp1
 	grep -o '[[:digit:]]\+' Cases/Correct/${value}.expected > temp2

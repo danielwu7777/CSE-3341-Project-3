@@ -1,7 +1,7 @@
 class IdList {
 	Id id;
 	IdList list;
-	
+
 	void parse() {
 		id = new Id();
 		id.parse();
@@ -9,9 +9,9 @@ class IdList {
 			Parser.scanner.nextToken();
 			list = new IdList();
 			list.parse();
-		} 
+		}
 	}
-	
+
 	// Called by DeclInt.semantic
 	void semanticIntVars() {
 		id.doublyDeclared();
@@ -20,7 +20,7 @@ class IdList {
 			list.semanticIntVars();
 		}
 	}
-	
+
 	// Called by DeclClass.semantic
 	void semanticRefVars() {
 		id.doublyDeclared();
@@ -29,7 +29,7 @@ class IdList {
 			list.semanticRefVars();
 		}
 	}
-	
+
 	void print() {
 		id.print();
 		if (list != null) {
@@ -38,11 +38,10 @@ class IdList {
 		}
 	}
 
-	// input is true when declaring int or false if declaring ref
-    void execute(boolean intOrRef) {
-		id.execute(intOrRef, true);
+	void execute() {
+		id.execute();
 		if (list != null) {
-			list.execute(intOrRef);
+			list.execute();
 		}
-    }
+	}
 }

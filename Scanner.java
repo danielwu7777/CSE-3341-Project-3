@@ -48,16 +48,16 @@ class Scanner {
                     case ',':
                         this.t = Core.COMMA;
                         break;
-						
-					case '}':
+
+                    case '}':
                         this.t = Core.RBRACE;
                         break;
 
                     case '{':
                         this.t = Core.LBRACE;
                         break;
-						
-					case '!':
+
+                    case '!':
                         this.t = Core.NEGATION;
                         break;
 
@@ -98,7 +98,7 @@ class Scanner {
                         break;
                     }
 
-					// Handle case of ID, CONST, or keyword
+                    // Handle case of ID, CONST, or keyword
                     default: {
                         boolean continued = true;
                         this.token = new StringBuilder();
@@ -115,7 +115,8 @@ class Scanner {
                                 }
                             }
                         }
-                        // if the first character is letter, stop until we hit something non-letter and non-digit
+                        // if the first character is letter, stop until we hit something non-letter and
+                        // non-digit
                         else if (Character.isLetter((char) c)) {
                             while (continued) {
                                 this.token.append((char) c);
@@ -128,7 +129,8 @@ class Scanner {
                                 }
                             }
                         }
-                        // if the first character is not letter, digit, or any special symbol above, stop reading
+                        // if the first character is not letter, digit, or any special symbol above,
+                        // stop reading
                         else {
                             this.token.append((char) c);
                         }
@@ -146,23 +148,23 @@ class Scanner {
                             case "end":
                                 this.t = Core.END;
                                 break;
-								
-							case "new":
+
+                            case "new":
                                 this.t = Core.NEW;
                                 break;
-								
+
                             case "define":
                                 this.t = Core.DEFINE;
                                 break;
-								
+
                             case "extends":
                                 this.t = Core.EXTENDS;
                                 break;
-								
+
                             case "class":
                                 this.t = Core.CLASS;
                                 break;
-							
+
                             case "int":
                                 this.t = Core.INT;
                                 break;
@@ -194,12 +196,12 @@ class Scanner {
                             case "output":
                                 this.t = Core.OUTPUT;
                                 break;
-								
+
                             case "ref":
                                 this.t = Core.REF;
                                 break;
-								
-							case "share":
+
+                            case "share":
                                 this.t = Core.SHARE;
                                 break;
 
@@ -216,7 +218,8 @@ class Scanner {
                                                 this.token.toString()) < 256) {
                                     this.t = Core.CONST;
                                 }
-                                // Handle cases of all the invalid input including invalid symbols, leading zeros, identifier with digit 0, constant greater than 255 and etc.
+                                // Handle cases of all the invalid input including invalid symbols, leading
+                                // zeros, identifier with digit 0, constant greater than 255 and etc.
                                 else {
                                     throw new Exception();
                                 }
@@ -232,7 +235,7 @@ class Scanner {
             System.out.println("ERROR: Invalid input " + this.token.toString());
             this.t = Core.ERROR;
         }
-		return this.t;
+        return this.t;
     }
 
     // Return the current token
@@ -248,4 +251,12 @@ class Scanner {
         return Integer.parseInt(this.token.toString());
     }
 
+    // helper method that returns true when currentToken is int and false when ref
+    public boolean intOrRef(Core token) {
+        boolean b = true;
+        if (token == Core.REF) {
+            b = false;
+        }
+        return b;
+    }
 }

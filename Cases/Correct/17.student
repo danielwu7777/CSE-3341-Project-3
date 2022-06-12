@@ -1,0 +1,13 @@
+{zg=0, yg=0, xg=0} this should be xg => 0
+[{}]
+{zg=0, yg=0, xg=5} this should be xg => 0
+[{}, {}]
+{zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}]
+{zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}]
+{zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}]
+{zg=55, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}, {}]
+55

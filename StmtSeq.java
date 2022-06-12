@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class StmtSeq {
 	Stmt stmt;
 	StmtSeq ss;
@@ -40,9 +42,11 @@ class StmtSeq {
 	}
 
 	void execute() {
+		StackReg.localVar.push(new HashMap<>());
 		stmt.execute();
 		if (ss != null) {
 			ss.execute();
 		}
+		StackReg.localVar.pop();
 	}
 }

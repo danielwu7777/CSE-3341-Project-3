@@ -1,8 +1,9 @@
 import java.util.*;
 
 class Parser {
-	//scanner is stored here as a static field so it is avaiable to the parse method
+	//scanner is stored here as a static field so it is available to the parse method
 	public static Scanner scanner;
+	public static Scanner dataScanner;
 	
 	//scopes is a data structure for the semantic checks, to verify variables being used are declared and what they were declared as
 	public static Stack<HashMap<String, Core>> scopes;
@@ -42,5 +43,4 @@ class Parser {
 			System.exit(0);
 		}
 	}
-
 }
