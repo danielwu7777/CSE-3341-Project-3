@@ -26,9 +26,11 @@ class DeclSeq {
 	}
 
 	void execute() {
+		StaticReg.inDeclSeq = true;
 		decl.execute();
 		if (ds != null) {
 			ds.execute();
 		}
+		StaticReg.inDeclSeq = false;
 	}
 }

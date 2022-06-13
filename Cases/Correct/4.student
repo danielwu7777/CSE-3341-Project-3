@@ -1,0 +1,12 @@
+{xg=0} this should be xg => 0
+[{y=0}, {}]
+y this should be y
+{xg=0} this should be xg => 0
+[{y=0}, {}, {}]
+{xg=0} this should be xg => 0
+[{y=0}, {}, {}]
+{xg=0} this should be xg => 0
+[{y=0}, {}, {}, {}]
+y this should be y
+{xg=0} this should be xg => 0
+[{y=0}, {}, {}, {}, {}]

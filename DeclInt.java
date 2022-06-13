@@ -24,6 +24,6 @@ class DeclInt {
 	}
 
     void execute() {
-		list.execute(true);
+		list.execute();
     }
 }

@@ -1,0 +1,11 @@
+{xg=0} this should be xg => 0
+[{}]
+{xg=2} this should be xg => 0
+[{}, {}]
+{xg=2} this should be xg => 0
+[{}, {}]
+{xg=2} this should be xg => 0
+[{}, {}]
+{xg=6} this should be xg => 0
+[{}, {}, {}]
+6

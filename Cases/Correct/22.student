@@ -1,0 +1,199 @@
+{cg=0, bg=0, ag=0, zg=0, yg=0, xg=0} this should be xg => 0
+[{}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=0, xg=5} this should be xg => 0
+[{}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=0} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=0} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=0} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=0} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=0} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=0} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-1} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-2} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-3} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-4} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-5} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-6} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-6} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-6} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-6} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-6} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-6} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-7} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-7} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-7} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-7} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-7} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-7} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-8} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-8} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-8} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-8} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-8} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-8} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-9} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-9} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-9} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-9} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-9} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-9} this should be xg => 0
+[{}, {}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-10} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-10} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-10} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-10} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+{cg=0, bg=0, ag=0, zg=0, yg=10, xg=-10} this should be xg => 0
+[{}, {}, {}, {}, {}, {}]
+-10

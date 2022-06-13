@@ -4,10 +4,11 @@ class If implements Stmt {
 	Cond cond;
 	StmtSeq ss1;
 	StmtSeq ss2;
-	
+
 	public void parse() {
 		Parser.scanner.nextToken();
-		cond = new Cond();;
+		cond = new Cond();
+		;
 		cond.parse();
 		Parser.expectedToken(Core.THEN);
 		Parser.scanner.nextToken();
@@ -27,7 +28,7 @@ class If implements Stmt {
 			Parser.scanner.nextToken();
 		}
 	}
-	
+
 	public void semantic() {
 		cond.semantic();
 		Parser.scopes.push(new HashMap<String, Core>());
@@ -39,25 +40,34 @@ class If implements Stmt {
 			Parser.scopes.pop();
 		}
 	}
-	
+
 	public void print(int indent) {
-		for (int i=0; i<indent; i++) {
+		for (int i = 0; i < indent; i++) {
 			System.out.print("  ");
 		}
 		System.out.print("if ");
 		cond.print();
 		System.out.println(" then {");
-		ss1.print(indent+1);
+		ss1.print(indent + 1);
 		if (ss2 != null) {
-			for (int i=0; i<indent; i++) {
+			for (int i = 0; i < indent; i++) {
 				System.out.print("	");
 			}
-		System.out.println("} else {");
-			ss2.print(indent+1);
+			System.out.println("} else {");
+			ss2.print(indent + 1);
 		}
-		for (int i=0; i<indent; i++) {
+		for (int i = 0; i < indent; i++) {
 			System.out.print("  ");
 		}
 		System.out.println("}");
+	}
+
+	public void execute() {
+		boolean result = cond.execute();
+		if (result) {
+			ss1.execute();
+		} else if (ss2 != null) {
+			ss2.execute();
+		}
 	}
 }

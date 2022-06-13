@@ -26,4 +26,9 @@ class Output implements Stmt {
 		expr.print();
 		System.out.println(");");
 	}
+
+	public void execute() {
+		int exprResult = expr.execute();
+		System.out.println(exprResult);
+	}
 }

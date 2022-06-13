@@ -1,2 +1,3 @@
-have execute for every class
+somehow pushing unecessary stacks onto StackReg (doing it in stmtseq but check elsewhere)
 
+have system outs in factor.java

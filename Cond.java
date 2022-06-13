@@ -1,9 +1,9 @@
 class Cond {
 	Cmpr cmpr;
 	Cond cond;
-	
+
 	void parse() {
-		if (Parser.scanner.currentToken() == Core.NEGATION){
+		if (Parser.scanner.currentToken() == Core.NEGATION) {
 			Parser.scanner.nextToken();
 			Parser.expectedToken(Core.LPAREN);
 			Parser.scanner.nextToken();
@@ -21,7 +21,7 @@ class Cond {
 			}
 		}
 	}
-	
+
 	void semantic() {
 		if (cmpr == null) {
 			cond.semantic();
@@ -32,7 +32,7 @@ class Cond {
 			}
 		}
 	}
-	
+
 	void print() {
 		if (cmpr == null) {
 			System.out.print("!(");
@@ -45,5 +45,18 @@ class Cond {
 				cond.print();
 			}
 		}
+	}
+
+	public boolean execute() {
+		boolean b;
+		if (cmpr == null) {
+			b = !cond.execute();
+		} else {
+			b = cmpr.execute();
+			if (cond != null) {
+				b = b || cond.execute();
+			}
+		}
+		return b;
 	}
 }
