@@ -65,9 +65,13 @@ class If implements Stmt {
 	public void execute() {
 		boolean result = cond.execute();
 		if (result) {
+			StackReg.localVar.push(new HashMap<>());
 			ss1.execute();
+			StackReg.localVar.pop();
 		} else if (ss2 != null) {
+			StackReg.localVar.push(new HashMap<>());
 			ss2.execute();
+			StackReg.localVar.pop();
 		}
 	}
 }

@@ -1,3 +1,1 @@
-somehow pushing unecessary stacks onto StackReg (doing it in stmtseq but check elsewhere)
-
-have system outs in factor.java
+test case 7 failing (in assign execute, boolean isGlobal should be false but is true)

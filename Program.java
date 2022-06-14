@@ -45,6 +45,8 @@ class Program {
 		if (ds != null) {
 			ds.execute();
 		}
+		StackReg.localVar.add(new HashMap<>());
 		ss.execute();
+		StackReg.localVar.pop();
 	}
 }

@@ -40,7 +40,9 @@ class Loop implements Stmt {
 
 	public void execute() {
 		while (cond.execute()) {
+			StackReg.localVar.push(new HashMap<>());
 			ss.execute();
+			StackReg.localVar.pop();
 		}
 	}
 }

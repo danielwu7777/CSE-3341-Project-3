@@ -42,11 +42,11 @@ class StmtSeq {
 	}
 
 	void execute() {
-		StackReg.localVar.push(new HashMap<>());
 		stmt.execute();
 		if (ss != null) {
+			StackReg.localVar.push(new HashMap<>());
 			ss.execute();
+			StackReg.localVar.pop();
 		}
-		StackReg.localVar.pop();
 	}
 }

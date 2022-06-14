@@ -47,15 +47,13 @@ class Factor {
 	}
 
 	public int execute() {
-		System.out.println(StaticReg.globVar.toString() + " this should be xg => 0");
-		System.out.println(StackReg.localVar.toString());
 		int result = 0;
 		if (id != null) {
 			if (intOrRef) {
 				if (StaticReg.isGlobal(identifier)) {
 					result = StaticReg.globVar.get(identifier + "g");
 				} else {
-					result = StackReg.localVar.peek().get(identifier);
+					result = StackReg.search(identifier);
 				}
 			} else {
 				if (StaticReg.isGlobal(identifier)) {

@@ -100,13 +100,13 @@ class Assign implements Stmt {
 						if (globalLeft) {
 							StaticReg.globVar.replace(identifierLeft + "g", input);
 						} else {
-							StackReg.localVar.peek().replace(identifierLeft, input);
+							StackReg.searchAndReplaceConst(identifierLeft, input);
 						}
 					} else {
 						if (globalLeft) {
 							Heap.listInt.set(StaticReg.globVar.get(identifierLeft + "g"), input);
 						} else {
-							Heap.listInt.set(StackReg.localVar.peek().get(identifierLeft), input);
+							Heap.listInt.set(StackReg.search(identifierLeft), input);
 						}
 					}
 					Parser.dataScanner.nextToken();
@@ -116,21 +116,21 @@ class Assign implements Stmt {
 			case 1:
 				if (intOrRef) {
 					if (globalLeft) {
-						StaticReg.globVar.replace(identifierLeft, 0);
+						StaticReg.globVar.replace(identifierLeft + "g", 0);
 					} else {
-						StackReg.localVar.peek().replace(identifierLeft, 0);
+						StackReg.searchAndReplaceConst(identifierLeft, 0);
 					}
 				} else {
 					Heap.listInt.add(null);
-					StackReg.localVar.peek().replace(identifierLeft, Heap.listInt.size() - 1);
+					StackReg.searchAndReplaceConst(identifierLeft, Heap.listInt.size() - 1);
 				}
 				break;
 			// "share" assignment
 			case 2:
 				if (StaticReg.isGlobal(identifierRight)) {
-					StaticReg.globVar.replace(identifierLeft, StaticReg.globVar.get(identifierRight));
+					StaticReg.globVar.replace(identifierLeft + "g", StaticReg.globVar.get(identifierRight));
 				} else {
-					StackReg.localVar.peek().replace(identifierLeft, StackReg.localVar.peek().get(identifierRight));
+					StackReg.searchAndReplaceConst(identifierLeft, StackReg.search(identifierRight));
 				}
 				break;
 			// <expr>
@@ -140,13 +140,13 @@ class Assign implements Stmt {
 					if (globalLeft) {
 						StaticReg.globVar.replace(identifierLeft + "g", exprResult);
 					} else {
-						StackReg.localVar.peek().replace(identifierLeft, exprResult);
+						StackReg.searchAndReplaceConst(identifierLeft, exprResult);
 					}
 				} else {
 					if (globalLeft) {
 						Heap.listInt.set(StaticReg.globVar.get(identifierLeft + "g"), exprResult);
 					} else {
-						Heap.listInt.set(StackReg.localVar.peek().get(identifierLeft), exprResult);
+						Heap.listInt.set(StackReg.search(identifierLeft), exprResult);
 					}
 				}
 				break;
