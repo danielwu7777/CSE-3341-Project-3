@@ -88,7 +88,7 @@ class Assign implements Stmt {
 	}
 
 	public void execute() {
-		boolean globalLeft = StaticReg.isGlobal(identifierLeft);
+		boolean notInStackAndIsGlobalLeft = StackReg.search(identifierLeft) == -1 && StaticReg.isGlobal(identifierLeft);
 		switch (type) {
 			// input() assignment
 			case 0:
@@ -97,13 +97,13 @@ class Assign implements Stmt {
 				} else {
 					int input = Parser.dataScanner.getCONST();
 					if (intOrRef) {
-						if (globalLeft) {
+						if (notInStackAndIsGlobalLeft) {
 							StaticReg.globVar.replace(identifierLeft + "g", input);
 						} else {
 							StackReg.searchAndReplaceConst(identifierLeft, input);
 						}
 					} else {
-						if (globalLeft) {
+						if (notInStackAndIsGlobalLeft) {
 							Heap.listInt.set(StaticReg.globVar.get(identifierLeft + "g"), input);
 						} else {
 							Heap.listInt.set(StackReg.search(identifierLeft), input);
@@ -115,7 +115,7 @@ class Assign implements Stmt {
 			// "new class" assignment
 			case 1:
 				if (intOrRef) {
-					if (globalLeft) {
+					if (notInStackAndIsGlobalLeft) {
 						StaticReg.globVar.replace(identifierLeft + "g", 0);
 					} else {
 						StackReg.searchAndReplaceConst(identifierLeft, 0);
@@ -125,10 +125,10 @@ class Assign implements Stmt {
 					StackReg.searchAndReplaceConst(identifierLeft, Heap.listInt.size() - 1);
 				}
 				break;
-			// "share" assignment
-			case 2:
-				if (StaticReg.isGlobal(identifierRight)) {
-					StaticReg.globVar.replace(identifierLeft + "g", StaticReg.globVar.get(identifierRight));
+			// "share" assignment  
+			case 2:  // fix this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+				if (StackReg.search(identifierRight) == -1 && StaticReg.isGlobal(identifierRight)) {
+					StaticReg.globVar.replace(identifierLeft + "g", StaticReg.globVar.get(identifierRight + "g"));
 				} else {
 					StackReg.searchAndReplaceConst(identifierLeft, StackReg.search(identifierRight));
 				}
@@ -137,13 +137,13 @@ class Assign implements Stmt {
 			case 3:
 				int exprResult = expr.execute();
 				if (intOrRef) {
-					if (globalLeft) {
+					if (notInStackAndIsGlobalLeft) {
 						StaticReg.globVar.replace(identifierLeft + "g", exprResult);
 					} else {
 						StackReg.searchAndReplaceConst(identifierLeft, exprResult);
 					}
 				} else {
-					if (globalLeft) {
+					if (notInStackAndIsGlobalLeft) {
 						Heap.listInt.set(StaticReg.globVar.get(identifierLeft + "g"), exprResult);
 					} else {
 						Heap.listInt.set(StackReg.search(identifierLeft), exprResult);

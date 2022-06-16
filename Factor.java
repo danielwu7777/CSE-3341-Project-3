@@ -49,17 +49,18 @@ class Factor {
 	public int execute() {
 		int result = 0;
 		if (id != null) {
+			boolean notInStackAndIsGlobal = StackReg.search(identifier) == -1 && StaticReg.isGlobal(identifier);
 			if (intOrRef) {
-				if (StaticReg.isGlobal(identifier)) {
+				if (notInStackAndIsGlobal) {
 					result = StaticReg.globVar.get(identifier + "g");
 				} else {
 					result = StackReg.search(identifier);
 				}
 			} else {
-				if (StaticReg.isGlobal(identifier)) {
+				if (notInStackAndIsGlobal) {
 					result = Heap.listInt.get(StaticReg.globVar.get(identifier + "g"));
 				} else {
-					result = Heap.listInt.get(StackReg.localVar.peek().get(identifier));
+					result = Heap.listInt.get(StackReg.search(identifier));
 				}
 			}
 		} else if (expr != null) {
