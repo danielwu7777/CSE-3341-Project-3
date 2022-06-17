@@ -126,7 +126,7 @@ class Assign implements Stmt {
 				}
 				break;
 			// "share" assignment  
-			case 2:  // fix this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+			case 2:  
 				if (StackReg.search(identifierRight) == -1 && StaticReg.isGlobal(identifierRight)) {
 					StaticReg.globVar.replace(identifierLeft + "g", StaticReg.globVar.get(identifierRight + "g"));
 				} else {
