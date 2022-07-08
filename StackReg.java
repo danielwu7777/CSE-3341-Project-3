@@ -15,7 +15,7 @@ class StackReg {
             while (!m.containsKey(key) && !copyOfStack.isEmpty()) {
                 m = copyOfStack.pop();
             }
-            Map<String, Integer> newMap = new HashMap<>() {
+            Map<String, Integer> newMap = new HashMap() {
                 {
                     put(key, value);
                 }
